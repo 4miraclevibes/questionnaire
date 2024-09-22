@@ -18,6 +18,10 @@
             <th class="text-white">Name</th>
             <th class="text-white">Email</th>
             <th class="text-white">Role</th>
+            <th class="text-white">From School</th>
+            <th class="text-white">Age</th>
+            <th class="text-white">Gender</th>
+            <th class="text-white">Exam Score</th>
             <th class="text-white">Actions</th>
           </tr>
         </thead>
@@ -28,9 +32,13 @@
             <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
             <td>{{ $user->role->name }}</td>
-              <td>
-                <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning btn-sm">Edit</a>
-                <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline-block;">
+            <td>{{ $user->from_school ?? '-' }}</td>
+            <td>{{ $user->age ?? '-' }}</td>
+            <td>{{ $user->gender ?? '-' }}</td>
+            <td>{{ $user->exam_score ?? '-' }}</td>
+            <td>
+              <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning btn-sm">Edit</a>
+              <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline-block;">
                   @csrf
                   @method('DELETE')
                   <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</button>

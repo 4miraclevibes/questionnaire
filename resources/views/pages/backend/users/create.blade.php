@@ -14,8 +14,6 @@
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email" required>
             </div>
-        </div>
-        <div class="row mb-3">
             <div class="col-md-6">
                 <label for="role_id" class="form-label">Role</label>
                 <select class="form-control" id="role_id" name="role_id" required>
@@ -28,14 +26,58 @@
                 <label for="password" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
-        </div>
-        <div class="row mb-3">
             <div class="col-md-6">
                 <label for="password_confirmation" class="form-label">Confirm Password</label>
                 <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required>
             </div>
         </div>
+        <div id="user-specific-fields" style="display: none;">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="from_school" class="form-label">From School</label>
+                    <input type="text" class="form-control" id="from_school" name="from_school">
+                </div>
+                <div class="col-md-6">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="number" class="form-control" id="age" name="age">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="gender" class="form-label">Gender</label>
+                    <select class="form-control" id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="exam_score" class="form-label">Exam Score</label>
+                    <input type="number" class="form-control" id="exam_score" name="exam_score" step="0.01">
+                </div>
+            </div>
+        </div>
         <button type="submit" class="btn btn-primary">Create</button>
     </form>
 </div>
+@endsection
+
+@section('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const roleSelect = document.getElementById('role_id');
+        const userFields = document.getElementById('user-specific-fields');
+
+        function toggleUserFields() {
+            const selectedOption = roleSelect.options[roleSelect.selectedIndex];
+            if (selectedOption.text.toLowerCase() === 'user') {
+                userFields.style.display = 'block';
+            } else {
+                userFields.style.display = 'none';
+            }
+        }
+
+        roleSelect.addEventListener('change', toggleUserFields);
+        toggleUserFields(); // Panggil fungsi ini untuk mengatur tampilan awal
+    });
+</script>
 @endsection
