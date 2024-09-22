@@ -23,7 +23,11 @@ class ResultController extends Controller
                 'category_result' => $categoryResults->map(function ($result) {
                     return $result['category_name'] . ': ' . $result['count'];
                 })->implode(', '),
-                'score' => $highestScore ?? 'Tidak ada skor'
+                'score' => $highestScore ?? 'Tidak ada skor',
+                'from_school' => $questionnaireResult->user->from_school ?? '-',
+                'age' => $questionnaireResult->user->age ?? '-',
+                'gender' => $questionnaireResult->user->gender ?? '-',
+                'exam_score' => $questionnaireResult->user->exam_score ?? '-'
             ];
         });
 

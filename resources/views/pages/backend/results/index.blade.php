@@ -14,6 +14,10 @@
             <th class="text-white">Category</th>
             <th class="text-white">Category Result</th>
             <th class="text-white">Score</th>
+            <th class="text-white">Asal Sekolah</th>
+            <th class="text-white">Umur</th>
+            <th class="text-white">Jenis Kelamin</th>
+            <th class="text-white">Nilai UN</th>
             <th class="text-white">Action</th>
           </tr>
         </thead>
@@ -25,6 +29,10 @@
             <td>{{ $result['category'] }}</td>
             <td>{{ $result['category_result'] }}</td>
             <td>{{ $result['score'] }}</td>
+            <td>{{ $result['from_school'] }}</td>
+            <td>{{ $result['age'] }}</td>
+            <td>{{ $result['gender'] }}</td>
+            <td>{{ $result['exam_score'] }}</td>
             <td>
               <a href="{{ route('landing.result', $result['id']) }}" class="btn btn-sm btn-primary">View</a>
             </td>

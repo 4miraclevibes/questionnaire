@@ -52,6 +52,9 @@
       <script src="{{ asset('assets/js/config.js') }}"></script>
       {{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css" /> --}}
       <link rel="stylesheet" href="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.css" />
+      @if (Route::is('results.index'))
+      <link rel="stylesheet" href="https://cdn.datatables.net/buttons/3.0.0/css/buttons.dataTables.css" />
+      @endif
       <style>
         .dataTables_filter{
           margin-bottom: 15px !important;
@@ -351,12 +354,6 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script>
-      $(document).ready(function () {
-          $('#example').DataTable({
-          });
-      });
-    </script>
-    <script>
       $(document).ready(function() {
         $('#select1').select2();
       });
@@ -371,6 +368,51 @@
     <script src="https://cdn.datatables.net/2.0.0/js/dataTables.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    @if (Route::is('results.index'))
+    <script>
+      $(document).ready(function () {
+          $('#example').DataTable({
+            layout: {
+                topStart: {
+                    buttons: [
+                        {
+                            extend: 'excelHtml5',
+                            exportOptions: {
+                                columns: [0,1,2,3,4,5,6,7,8]
+                            }
+                        },
+                        {
+                            extend: 'csvHtml5',
+                            exportOptions: {
+                                columns: [0,1,2,3,4,5,6,7,8]
+                            }
+                        },
+                        {
+                            extend: 'pdfHtml5',
+                            exportOptions: {
+                                columns: [0,1,2,3,4,5,6,7,8]
+                            }
+                        }
+                    ]
+                }
+            }
+          });
+      });
+    </script>
+    <script src="https://cdn.datatables.net/buttons/3.0.0/js/dataTables.buttons.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/3.0.0/js/buttons.dataTables.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    @else
+    <script>
+      $(document).ready(function () {
+          $('#example').DataTable();
+      });
+    </script>
+    @endif
     @yield('scripts')
   </body>
 </html>
