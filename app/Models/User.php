@@ -25,6 +25,11 @@ class User extends Authenticatable
         'age',
         'gender',
         'exam_score',
+        'english_score',
+        'math_score',
+        'culture_score',
+        'tech_score',
+        'school_year',
     ];
 
     /**

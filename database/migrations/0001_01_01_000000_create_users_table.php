@@ -20,6 +20,11 @@ return new class extends Migration
             $table->integer('age')->nullable();
             $table->string('gender')->nullable();
             $table->double('exam_score')->nullable();
+            $table->double('english_score')->nullable();
+            $table->double('math_score')->nullable();
+            $table->double('culture_score')->nullable();
+            $table->double('tech_score')->nullable();
+            $table->string('school_year')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

@@ -54,6 +54,26 @@
                     <label for="exam_score" class="form-label">Exam Score</label>
                     <input type="number" class="form-control" id="exam_score" name="exam_score" step="0.01">
                 </div>
+                <div class="col-md-6">
+                    <label for="english_score" class="form-label">English Score</label>
+                    <input type="number" class="form-control" id="english_score" name="english_score" step="0.01">
+                </div>
+                <div class="col-md-6">
+                    <label for="math_score" class="form-label">Math Score</label>
+                    <input type="number" class="form-control" id="math_score" name="math_score" step="0.01">
+                </div>
+                <div class="col-md-6">
+                    <label for="culture_score" class="form-label">Culture Score</label>
+                    <input type="number" class="form-control" id="culture_score" name="culture_score" step="0.01">
+                </div>
+                <div class="col-md-6">
+                    <label for="tech_score" class="form-label">Tech Score</label>
+                    <input type="number" class="form-control" id="tech_score" name="tech_score" step="0.01">
+                </div>
+                <div class="col-md-6">
+                    <label for="school_year" class="form-label">School Year</label>
+                    <input type="text" class="form-control" id="school_year" name="school_year">
+                </div>
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Create</button>

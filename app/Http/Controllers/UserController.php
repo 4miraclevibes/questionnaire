@@ -32,6 +32,11 @@ class UserController extends Controller
             'age' => 'nullable|integer',
             'gender' => 'nullable|string|max:255',
             'exam_score' => 'nullable',
+            'english_score' => 'nullable',
+            'math_score' => 'nullable',
+            'culture_score' => 'nullable',
+            'tech_score' => 'nullable',
+            'school_year' => 'nullable|string|max:255',
         ]);
 
         User::create([
@@ -43,6 +48,11 @@ class UserController extends Controller
             'age' => $request->age,
             'gender' => $request->gender,
             'exam_score' => $request->exam_score,
+            'english_score' => $request->english_score,
+            'math_score' => $request->math_score,
+            'culture_score' => $request->culture_score,
+            'tech_score' => $request->tech_score,
+            'school_year' => $request->school_year,
         ]);
 
         return redirect()->route('users.index')->with('success', 'User created successfully.');
@@ -65,6 +75,11 @@ class UserController extends Controller
             'age' => 'nullable|integer',
             'gender' => 'nullable|string|max:255',
             'exam_score' => 'nullable',
+            'english_score' => 'nullable',
+            'math_score' => 'nullable',
+            'culture_score' => 'nullable',
+            'tech_score' => 'nullable',
+            'school_year' => 'nullable|string|max:255',
         ]);
 
         $user->update([
@@ -76,6 +91,11 @@ class UserController extends Controller
             'age' => $request->age,
             'gender' => $request->gender,
             'exam_score' => $request->exam_score,
+            'english_score' => $request->english_score,
+            'math_score' => $request->math_score,
+            'culture_score' => $request->culture_score,
+            'tech_score' => $request->tech_score,
+            'school_year' => $request->school_year,
         ]);
 
         return redirect()->route('users.index')->with('success', 'User updated successfully.');
@@ -85,5 +105,11 @@ class UserController extends Controller
     {
         $user->delete();
         return redirect()->route('users.index')->with('success', 'User deleted successfully.');
+    }
+
+    public function userList()
+    {
+        $users = User::where('role_id', 2)->get();
+        return view('pages.backend.users.userList', compact('users'));
     }
 }

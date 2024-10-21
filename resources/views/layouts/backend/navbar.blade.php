@@ -25,10 +25,17 @@
               </li>
               @if (Auth::user()->role->name == 'admin' || Auth::user()->role->name == 'operator')
               {{-- Users --}}
-              <li class="menu-item {{ Route::is('users*') ? 'active' : '' }} {{ Auth::user()->role->name == 'operator' ? 'd-none' : '' }}">
+              <li class="menu-item {{ Route::is('users.index', 'users.edit') ? 'active' : '' }} {{ Auth::user()->role->name == 'operator' ? 'd-none' : '' }}">
                 <a href="{{ route('users.index') }}" class="menu-link">
                   <i class="menu-icon tf-icons bx bxs-user"></i>
                   <div data-i18n="Analytics">Users</div>
+                </a>
+              </li>
+              {{-- User List --}}
+              <li class="menu-item {{ Route::is('users.userList') ? 'active' : '' }} {{ Auth::user()->role->name == 'operator' ? 'd-none' : '' }}">
+                <a href="{{ route('users.userList') }}" class="menu-link">
+                  <i class="menu-icon tf-icons bx bxs-user"></i>
+                  <div data-i18n="Analytics">Peserta  </div>
                 </a>
               </li>
               {{-- Categories --}}

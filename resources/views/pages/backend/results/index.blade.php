@@ -18,6 +18,12 @@
             <th class="text-white">Umur</th>
             <th class="text-white">Jenis Kelamin</th>
             <th class="text-white">Nilai UN</th>
+            <th class="text-white">Nilai Bahasa Inggris</th>
+            <th class="text-white">Nilai Matematika</th>
+            <th class="text-white">Nilai Bahasa dan Sastra</th>
+            <th class="text-white">Nilai Teknologi Informasi</th>
+            <th class="text-white">Rata Rata</th>
+            <th class="text-white">Tahun Ajaran</th>
             <th class="text-white">Action</th>
           </tr>
         </thead>
@@ -33,6 +39,12 @@
             <td>{{ $result['age'] }}</td>
             <td>{{ $result['gender'] }}</td>
             <td>{{ $result['exam_score'] }}</td>
+            <td>{{ $result['english_score'] }}</td>
+            <td>{{ $result['math_score'] }}</td>
+            <td>{{ $result['culture_score'] }}</td>
+            <td>{{ $result['tech_score'] }}</td>
+            <td>{{ $result['average_score'] }}</td>
+            <td>{{ $result['school_year'] }}</td>
             <td>
               <a href="{{ route('landing.result', $result['id']) }}" class="btn btn-sm btn-primary">View</a>
             </td>

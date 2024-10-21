@@ -15,6 +15,7 @@ class ResultController extends Controller
             $categoryResults = $this->getCategoryResults($questionnaireResult);
             $mostCommonCategory = $categoryResults->first();
             $highestScore = $categoryResults->max('count');
+            $averageScore = ($questionnaireResult->user->english_score + $questionnaireResult->user->math_score + $questionnaireResult->user->culture_score + $questionnaireResult->user->tech_score) / 4;
 
             return [
                 'id' => $questionnaireResult->id,  // Added this line
@@ -27,7 +28,13 @@ class ResultController extends Controller
                 'from_school' => $questionnaireResult->user->from_school ?? '-',
                 'age' => $questionnaireResult->user->age ?? '-',
                 'gender' => $questionnaireResult->user->gender ?? '-',
-                'exam_score' => $questionnaireResult->user->exam_score ?? '-'
+                'exam_score' => $questionnaireResult->user->exam_score ?? '-',
+                'english_score' => $questionnaireResult->user->english_score ?? '-',
+                'math_score' => $questionnaireResult->user->math_score ?? '-',
+                'culture_score' => $questionnaireResult->user->culture_score ?? '-',
+                'tech_score' => $questionnaireResult->user->tech_score ?? '-',
+                'school_year' => $questionnaireResult->user->school_year ?? '-',
+                'average_score' => $averageScore ?? '-'
             ];
         });
 
