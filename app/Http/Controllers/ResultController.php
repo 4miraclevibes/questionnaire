@@ -35,7 +35,9 @@ class ResultController extends Controller
                 'tech_score' => $questionnaireResult->user->tech_score ?? '-',
                 'school_year' => $questionnaireResult->user->school_year ?? '-',
                 'average_score' => $averageScore ?? '-',
-                'interview_score' => $questionnaireResult->user->interview_score ?? '-'
+                'interview_sc_tkj' => $questionnaireResult->user->interview_sc_tkj ?? '-',
+                'interview_sc_rpl' => $questionnaireResult->user->interview_sc_rpl ?? '-',
+                'interview_sc_multimedia' => $questionnaireResult->user->interview_sc_multimedia ?? '-',
             ];
         });
 

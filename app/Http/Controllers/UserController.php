@@ -36,6 +36,9 @@ class UserController extends Controller
             'math_score' => 'nullable',
             'culture_score' => 'nullable',
             'tech_score' => 'nullable',
+            'interview_sc_tkj' => 'nullable',
+            'interview_sc_rpl' => 'nullable',
+            'interview_sc_multimedia' => 'nullable',
             'school_year' => 'nullable|string|max:255',
         ]);
 
@@ -52,6 +55,9 @@ class UserController extends Controller
             'math_score' => $request->math_score,
             'culture_score' => $request->culture_score,
             'tech_score' => $request->tech_score,
+            'interview_sc_tkj' => $request->interview_sc_tkj,
+            'interview_sc_rpl' => $request->interview_sc_rpl,
+            'interview_sc_multimedia' => $request->interview_sc_multimedia,
             'school_year' => $request->school_year,
         ]);
 
@@ -79,6 +85,9 @@ class UserController extends Controller
             'math_score' => 'nullable',
             'culture_score' => 'nullable',
             'tech_score' => 'nullable',
+            'interview_sc_tkj' => 'nullable',
+            'interview_sc_rpl' => 'nullable',
+            'interview_sc_multimedia' => 'nullable',
             'school_year' => 'nullable|string|max:255',
         ]);
 
@@ -95,7 +104,9 @@ class UserController extends Controller
             'math_score' => $request->math_score,
             'culture_score' => $request->culture_score,
             'tech_score' => $request->tech_score,
-            'interview_score' => $request->interview_score,
+            'interview_sc_tkj' => $request->interview_sc_tkj,
+            'interview_sc_rpl' => $request->interview_sc_rpl,
+            'interview_sc_multimedia' => $request->interview_sc_multimedia,
             'school_year' => $request->school_year,
         ]);
 

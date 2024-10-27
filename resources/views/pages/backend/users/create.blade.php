@@ -71,8 +71,16 @@
                     <input type="number" class="form-control" id="tech_score" name="tech_score" step="0.01">
                 </div>
                 <div class="col-md-6">
-                    <label for="interview_score" class="form-label">Interview Score</label>
-                    <input type="number" class="form-control" id="interview_score" name="interview_score" step="0.01">
+                    <label for="interview_sc_tkj" class="form-label">Interview Score TKJ</label>
+                    <input type="number" class="form-control" id="interview_sc_tkj" name="interview_sc_tkj" step="0.01">
+                </div>
+                <div class="col-md-6">
+                    <label for="interview_sc_rpl" class="form-label">Interview Score RPL</label>
+                    <input type="number" class="form-control" id="interview_sc_rpl" name="interview_sc_rpl" step="0.01">
+                </div>
+                <div class="col-md-6">
+                    <label for="interview_sc_multimedia" class="form-label">Interview Score Multimedia</label>
+                    <input type="number" class="form-control" id="interview_sc_multimedia" name="interview_sc_multimedia" step="0.01">
                 </div>
                 <div class="col-md-6">
                     <label for="school_year" class="form-label">School Year</label>

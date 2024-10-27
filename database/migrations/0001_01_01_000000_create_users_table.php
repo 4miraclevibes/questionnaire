@@ -24,7 +24,9 @@ return new class extends Migration
             $table->double('math_score')->nullable();
             $table->double('culture_score')->nullable();
             $table->double('tech_score')->nullable();
-            $table->double('interview_score')->nullable();
+            $table->double('interview_sc_tkj')->nullable();
+            $table->double('interview_sc_rpl')->nullable();
+            $table->double('interview_sc_multimedia')->nullable();
             $table->string('school_year')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
