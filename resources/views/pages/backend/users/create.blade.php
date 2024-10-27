@@ -71,6 +71,10 @@
                     <input type="number" class="form-control" id="tech_score" name="tech_score" step="0.01">
                 </div>
                 <div class="col-md-6">
+                    <label for="interview_score" class="form-label">Interview Score</label>
+                    <input type="number" class="form-control" id="interview_score" name="interview_score" step="0.01">
+                </div>
+                <div class="col-md-6">
                     <label for="school_year" class="form-label">School Year</label>
                     <input type="text" class="form-control" id="school_year" name="school_year">
                 </div>

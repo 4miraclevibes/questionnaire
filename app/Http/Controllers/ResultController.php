@@ -34,7 +34,8 @@ class ResultController extends Controller
                 'culture_score' => $questionnaireResult->user->culture_score ?? '-',
                 'tech_score' => $questionnaireResult->user->tech_score ?? '-',
                 'school_year' => $questionnaireResult->user->school_year ?? '-',
-                'average_score' => $averageScore ?? '-'
+                'average_score' => $averageScore ?? '-',
+                'interview_score' => $questionnaireResult->user->interview_score ?? '-'
             ];
         });
 

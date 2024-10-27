@@ -95,6 +95,7 @@ class UserController extends Controller
             'math_score' => $request->math_score,
             'culture_score' => $request->culture_score,
             'tech_score' => $request->tech_score,
+            'interview_score' => $request->interview_score,
             'school_year' => $request->school_year,
         ]);
 

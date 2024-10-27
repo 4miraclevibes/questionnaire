@@ -29,6 +29,7 @@ class User extends Authenticatable
         'math_score',
         'culture_score',
         'tech_score',
+        'interview_score',
         'school_year',
     ];
 

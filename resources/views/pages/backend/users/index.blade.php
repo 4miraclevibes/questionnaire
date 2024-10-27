@@ -26,6 +26,7 @@
             <th class="text-white">Math Score</th>
             <th class="text-white">Culture Score</th>
             <th class="text-white">Tech Score</th>
+            <th class="text-white">Interview Score</th>
             <th class="text-white">School Year</th>
             <th class="text-white">Average Score</th>
             <th class="text-white">Actions</th>
@@ -46,6 +47,7 @@
             <td>{{ $user->math_score ?? '-' }}</td>
             <td>{{ $user->culture_score ?? '-' }}</td>
             <td>{{ $user->tech_score ?? '-' }}</td>
+            <td>{{ $user->interview_score ?? '-' }}</td>
             <td>{{ $user->school_year ?? '-' }}</td>
             <td>{{ ($user->english_score + $user->math_score + $user->culture_score + $user->tech_score) / 4 ?? '-' }}</td>
             <td>

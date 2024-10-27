@@ -22,6 +22,7 @@
             <th class="text-white">Nilai Matematika</th>
             <th class="text-white">Nilai Bahasa dan Sastra</th>
             <th class="text-white">Nilai Teknologi Informasi</th>
+            <th class="text-white">Nilai Interview</th>
             <th class="text-white">Rata Rata</th>
             <th class="text-white">Tahun Ajaran</th>
             <th class="text-white">Action</th>
@@ -43,6 +44,7 @@
             <td>{{ $result['math_score'] }}</td>
             <td>{{ $result['culture_score'] }}</td>
             <td>{{ $result['tech_score'] }}</td>
+            <td>{{ $result['interview_score'] }}</td>
             <td>{{ $result['average_score'] }}</td>
             <td>{{ $result['school_year'] }}</td>
             <td>
